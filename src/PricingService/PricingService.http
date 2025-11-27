@@ -1,0 +1,6 @@
+@PricingService_HostAddress = https://localhost:7004
+
+GET {{PricingService_HostAddress}}/
+Accept: application/json
+
+###

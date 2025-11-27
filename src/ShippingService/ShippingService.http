@@ -1,0 +1,6 @@
+@ShippingService_HostAddress = https://localhost:7008
+
+GET {{ShippingService_HostAddress}}/
+Accept: application/json
+
+###

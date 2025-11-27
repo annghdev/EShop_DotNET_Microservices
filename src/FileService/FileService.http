@@ -1,0 +1,6 @@
+@FileService_HostAddress = https://localhost:7011
+
+GET {{FileService_HostAddress}}/
+Accept: application/json
+
+###

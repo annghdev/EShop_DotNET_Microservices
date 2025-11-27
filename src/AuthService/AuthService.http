@@ -1,0 +1,6 @@
+@AuthService_HostAddress = https://localhost:7001
+
+GET {{AuthService_HostAddress}}/
+Accept: application/json
+
+###
