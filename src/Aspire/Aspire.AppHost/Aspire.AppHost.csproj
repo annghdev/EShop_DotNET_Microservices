@@ -9,18 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ApiGateway\ApiGateway.csproj" />
     <ProjectReference Include="..\..\AuthService\AuthService.csproj" />
-    <ProjectReference Include="..\..\CartService\CartService.csproj" />
+    <ProjectReference Include="..\..\BFF\BFF.csproj" />
     <ProjectReference Include="..\..\CatalogService\CatalogService.csproj" />
-    <ProjectReference Include="..\..\FileService\FileService.csproj" />
-    <ProjectReference Include="..\..\InventoryService\InventoryService.csproj" />
-    <ProjectReference Include="..\..\NotificationService\NotificationService.csproj" />
     <ProjectReference Include="..\..\OrderService\OrderService.csproj" />
-    <ProjectReference Include="..\..\PaymentService\PaymentService.csproj" />
-    <ProjectReference Include="..\..\PricingService\PricingService.csproj" />
-    <ProjectReference Include="..\..\ReportService\ReportService.csproj" />
-    <ProjectReference Include="..\..\ShippingService\ShippingService.csproj" />
     <ProjectReference Include="..\Aspire.Web\Aspire.Web.csproj" />
   </ItemGroup>
 

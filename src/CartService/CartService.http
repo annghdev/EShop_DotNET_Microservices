@@ -1,6 +1,0 @@
-@CartService_HostAddress = https://localhost:5004
-
-GET {{CartService_HostAddress}}/
-Accept: application/json
-
-###

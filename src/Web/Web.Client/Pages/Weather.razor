@@ -1,0 +1,26 @@
+﻿@page "/weather"
+@inject TestApiClient ApiClient
+<PageTitle>Weather</PageTitle>
+
+<h1>Weather</h1>
+
+<p>This component demonstrates showing data.</p>
+
+@if (data == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p>@data</p>
+}
+
+
+@code {
+    string? data;
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(100);
+        data = await ApiClient.GetData();
+    }
+}

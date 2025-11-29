@@ -1,6 +1,0 @@
-@ReportService_HostAddress = https://localhost:7009
-
-GET {{ReportService_HostAddress}}/
-Accept: application/json
-
-###
