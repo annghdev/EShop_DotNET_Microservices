@@ -1,23 +1,484 @@
 ﻿@inherits LayoutComponentBase
 
+
+<title>Annghdev Eshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<div class="snow-layer"></div>
+<div class="nebula"></div>
+<div class="nebula"></div>
+<div class="nebula"></div>
+
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
+    <nav class="top-nav">
+        <div class="logo">
+            <span>✦</span>
+            Annghdev Eshop
+        </div>
+        <div class="nav-links">
+            <a href="#new">New In</a>
+            <a href="#products">Studio Lab</a>
+            <a href="#stories">Stories</a>
+            <a href="#care">Care</a>
+        </div>
+        <div class="nav-actions">
+            <div class="theme-icon-group" role="group" aria-label="Tùy chọn giao diện">
+                <button class="icon-toggle" id="baseThemeToggle" type="button" aria-label="Chuyển chế độ sáng/tối">🌙</button>
+                @* <button class="icon-toggle" id="holidayToggle" type="button" aria-label="Bật Noel Mode">✨</button> *@
+            </div>
+            <button class="chip ghost">Trải nghiệm XR</button>
+            <button class="chip primary">Đặt stylist</button>
+        </div>
+    </nav>
+
+    <div class="garland" aria-hidden="true"></div>
+
+    <div class="floating-notice">
+        <span id="noticeText"><strong>Cosmic Friday</strong> | Freeship toàn quốc + ưu đãi 15% smartwear.</span>
     </div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+    <header id="new">
+        <div>
+            <p class="hero-kicker">The Curated Edit</p>
+            <h1>Bộ sưu tập <span>Siêu phẩm</span> được tuyển chọn bởi GPT Codex Boutique</h1>
+            <p class="hero-text">Thiết kế tương lai, chất liệu thượng hạng, trải nghiệm giàu cảm hứng. Hoàn hảo cho phong cách sống hiện đại.</p>
+            <div class="hero-cta">
+                <button class="btn btn-primary">Khám phá ngay</button>
+                <button class="btn btn-ghost">Trải nghiệm AR</button>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>120+</h3>
+                    <p>Nhà thiết kế độc quyền</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4.9/5</h3>
+                    <p>Mức độ hài lòng</p>
+                </div>
+                <div class="stat-item">
+                    <h3>48h</h3>
+                    <p>Giao nhanh toàn quốc</p>
+                </div>
+            </div>
         </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
+        <div class="hero-visual">
+            <div class="hero-pill">Bộ sưu tập Signature ✦</div>
+            <img src="https://images.unsplash.com/photo-1463107971871-fbac9ddb920f?auto=format&fit=crop&w=800&q=80" alt="Hero product">
+        </div>
+    </header>
+    @Body
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                GPT Codex Boutique
+                <p>Chạm vào những thiết kế đậm chất vị lai, giao nhanh và có stylist riêng đồng hành.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram">◎</a>
+                    <a href="#" aria-label="Behance">β</a>
+                    <a href="#" aria-label="Dribbble">●</a>
+                </div>
+            </div>
+            <div>
+                <p class="footer-heading">Danh mục</p>
+                <ul class="footer-links">
+                    <li><a href="/testapi">Smartwear</a></li>
+                    <li><a href="#products">Lifestyle</a></li>
+                    <li><a href="#stories">Home Lab</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Dịch vụ</p>
+                <ul class="footer-links">
+                    <li><a href="#">Stylist cá nhân</a></li>
+                    <li><a href="#">Trải nghiệm XR</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Kết nối</p>
+                <ul class="footer-links">
+                    <li><a href="mailto:hey@gptcodex.vn">hey@gptcodex.vn</a></li>
+                    <li><a href="#">Hotline: 1800 6868</a></li>
+                    <li><a href="#">Tải app GPT Codex</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 GPT Codex Boutique</span>
+            <span>Privacy · Terms · Cookies</span>
+        </div>
+    </footer>
 </div>
 
-<div id="blazor-error-ui">
-    An unhandled error has occurred.
-    <a href="" class="reload">Reload</a>
-    <a class="dismiss">🗙</a>
-</div>
+<script>
+    const products = [
+        {
+            id: 1,
+            title: "Luna Arc Smartwatch",
+            category: "smartwear",
+            description: "Vòng tay thông minh phủ nano, theo dõi giấc ngủ & stress.",
+            price: 4800000,
+            rating: 4.9,
+            badge: "new",
+            image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 2,
+            title: "AeroFlow Headphones",
+            category: "audio",
+            description: "Tai nghe không dây chống ồn thế hệ mới, spatial audio.",
+            price: 7200000,
+            rating: 4.8,
+            badge: "hot",
+            image: "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 3,
+            title: "Velvet Glow Lamp",
+            category: "home",
+            description: "Đèn ngủ cảm biến ánh sáng, chuyển sắc gradient dịu nhẹ.",
+            price: 1850000,
+            rating: 4.7,
+            badge: "new",
+            image: "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 4,
+            title: "Kaihō Ceramic Set",
+            category: "home",
+            description: "Bộ gốm thủ công Nhật Bản phối mini table scape.",
+            price: 2650000,
+            rating: 4.6,
+            badge: "hot",
+            image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 5,
+            title: "Nova Flow Bottle",
+            category: "lifestyle",
+            description: "Bình giữ nhiệt titan cảm biến nhiệt độ bằng LED.",
+            price: 980000,
+            rating: 4.5,
+            badge: "new",
+            image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 6,
+            title: "Halo Runner Sneakers",
+            category: "lifestyle",
+            description: "Sneaker knit 4D đàn hồi, dải phản quang chạy đêm.",
+            price: 3350000,
+            rating: 4.9,
+            badge: "hot",
+            image: "https://images.unsplash.com/photo-1514986888952-8cd320577b68?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 7,
+            title: "Nebula Pods",
+            category: "audio",
+            description: "Tai nghe true wireless housing kính sapphire.",
+            price: 2950000,
+            rating: 4.6,
+            badge: "new",
+            image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 8,
+            title: "Pulse Wave Jacket",
+            category: "smartwear",
+            description: "Áo khoác cảm ứng nhiệt, cân bằng nhiệt độ cơ thể.",
+            price: 5400000,
+            rating: 4.7,
+            badge: "hot",
+            image: "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 9,
+            title: "Orbit Coffee Dripper",
+            category: "home",
+            description: "Phễu pour-over thủy tinh borosilicate, giữ nhiệt 25 phút.",
+            price: 2150000,
+            rating: 4.8,
+            badge: "new",
+            image: "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 10,
+            title: "Sora Balance Mat",
+            category: "lifestyle",
+            description: "Thảm tập yoga phủ khoáng ion âm, chống trượt tuyệt đối.",
+            price: 1650000,
+            rating: 4.5,
+            badge: "new",
+            image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80"
+        }
+    ];
+
+    const state = {
+        filter: 'all',
+        search: '',
+        sort: 'featured',
+        favorites: new Set(),
+        page: 1,
+        perPage: 6,
+        mobileTwoCols: false
+    };
+
+    const productsGrid = document.getElementById('productsGrid');
+    const emptyState = document.getElementById('emptyState');
+    const searchInput = document.getElementById('searchInput');
+    const sortSelect = document.getElementById('sortSelect');
+    const categoryPills = document.querySelectorAll('#categoryPills .pill');
+    const pagination = document.getElementById('pagination');
+    const mobileLayoutToggle = document.getElementById('mobileLayoutToggle');
+    const baseThemeToggle = document.getElementById('baseThemeToggle');
+    const holidayToggle = document.getElementById('holidayToggle');
+
+    const currency = new Intl.NumberFormat('vi-VN', {
+        style: 'currency',
+        currency: 'VND'
+    });
+
+    function filterProducts() {
+        let filtered = [...products];
+
+        if (state.filter !== 'all') {
+            filtered = filtered.filter(p => p.category === state.filter);
+        }
+
+        if (state.search.trim()) {
+            const keyword = state.search.toLowerCase();
+            filtered = filtered.filter(p =>
+                p.title.toLowerCase().includes(keyword) ||
+                p.description.toLowerCase().includes(keyword)
+            );
+        }
+
+        if (state.sort === 'price-asc') {
+            filtered.sort((a, b) => a.price - b.price);
+        } else if (state.sort === 'price-desc') {
+            filtered.sort((a, b) => b.price - a.price);
+        } else {
+            filtered.sort((a, b) => b.rating - a.rating);
+        }
+
+        return filtered;
+    }
+
+    function renderProducts() {
+        const data = filterProducts();
+        productsGrid.innerHTML = '';
+        const totalItems = data.length;
+        const totalPages = Math.ceil(totalItems / state.perPage);
+
+        if (!totalItems) {
+            emptyState.hidden = false;
+            renderPagination(0);
+            return;
+        }
+
+        emptyState.hidden = true;
+        if (state.page > totalPages) state.page = Math.max(1, totalPages);
+
+        const start = (state.page - 1) * state.perPage;
+        const pageItems = data.slice(start, start + state.perPage);
+
+        pageItems.forEach(product => {
+            const card = document.createElement('article');
+            card.className = 'product-card';
+            card.innerHTML = `
+                <div class="favorite ${state.favorites.has(product.id) ? 'active' : ''}" data-id="${product.id}">♡</div>
+                <figure class="product-media">
+                    <img src="${product.image}" alt="${product.title}">
+                    <span class="badge ${product.badge}">${product.badge === 'hot' ? 'Hot' : 'New'}</span>
+                </figure>
+                <p class="product-category">${product.category}</p>
+                <h3 class="product-title">${product.title}</h3>
+                <p class="product-desc">${product.description}</p>
+                <div class="product-meta">
+                    <div class="price">${currency.format(product.price)}<small>Giao nhanh 48h</small></div>
+                    <div class="rating">★ ${product.rating}</div>
+                </div>
+                <div class="product-actions">
+                    <button class="secondary">Xem chi tiết</button>
+                    <button class="primary" data-action="cart">Thêm giỏ</button>
+                </div>
+            `;
+            productsGrid.appendChild(card);
+        });
+
+        renderPagination(totalPages);
+    }
+
+    function renderPagination(totalPages) {
+        if (!pagination) return;
+        if (totalPages <= 1) {
+            pagination.hidden = true;
+            pagination.innerHTML = '';
+            return;
+        }
+
+        pagination.hidden = false;
+        pagination.innerHTML = '';
+
+        const createButton = (label, page, disabled = false, active = false) => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.textContent = label;
+            btn.disabled = disabled;
+            if (active) btn.classList.add('active');
+            btn.dataset.page = page;
+            return btn;
+        };
+
+        pagination.appendChild(createButton('‹', String(Math.max(1, state.page - 1)), state.page === 1));
+
+        for (let i = 1; i <= totalPages; i += 1) {
+            pagination.appendChild(createButton(String(i), String(i), false, state.page === i));
+        }
+
+        pagination.appendChild(createButton('›', String(Math.min(totalPages, state.page + 1)), state.page === totalPages));
+    }
+
+    function resetToFirstPage() {
+        state.page = 1;
+    }
+
+    searchInput.addEventListener('input', (e) => {
+        state.search = e.target.value;
+        resetToFirstPage();
+        renderProducts();
+    });
+
+    sortSelect.addEventListener('change', (e) => {
+        state.sort = e.target.value;
+        resetToFirstPage();
+        renderProducts();
+    });
+
+    categoryPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            categoryPills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+            state.filter = pill.dataset.filter;
+            resetToFirstPage();
+            renderProducts();
+        });
+    });
+
+    pagination?.addEventListener('click', (event) => {
+        const button = event.target.closest('button[data-page]');
+        if (!button || button.disabled) return;
+        const nextPage = Number(button.dataset.page);
+        if (Number.isNaN(nextPage) || nextPage === state.page) return;
+        state.page = nextPage;
+        renderProducts();
+    });
+
+    productsGrid.addEventListener('click', (event) => {
+        if (event.target.classList.contains('favorite')) {
+            const id = Number(event.target.dataset.id);
+            if (state.favorites.has(id)) {
+                state.favorites.delete(id);
+            } else {
+                state.favorites.add(id);
+            }
+            event.target.classList.toggle('active');
+        }
+
+        if (event.target.dataset.action === 'cart') {
+            event.target.textContent = 'Đã thêm ✓';
+            event.target.disabled = true;
+            setTimeout(() => {
+                event.target.textContent = 'Thêm giỏ';
+                event.target.disabled = false;
+            }, 1800);
+        }
+    });
+
+    const topNav = document.querySelector('.top-nav');
+    window.addEventListener('scroll', () => {
+        if (!topNav) return;
+        topNav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    const noticeText = document.getElementById('noticeText');
+    const noticeMessages = [
+        '<strong>Cosmic Friday</strong> | Freeship toàn quốc + ưu đãi 15% smartwear.',
+        '<strong>Signature Lab</strong> | Book stylist riêng, trải nghiệm XR miễn phí.',
+        '<strong>Flash Drop</strong> | Halo Runner restock 50 đôi duy nhất tuần này.',
+        '<strong>Noel Exclusive</strong> | Quà tặng gói lụa + thiệp viết tay cho mọi đơn.'
+    ];
+    let noticeIndex = 0;
+
+    if (noticeText) {
+        setInterval(() => {
+            noticeText.style.opacity = 0;
+            setTimeout(() => {
+                noticeIndex = (noticeIndex + 1) % noticeMessages.length;
+                noticeText.innerHTML = noticeMessages[noticeIndex];
+                noticeText.style.opacity = 1;
+            }, 400);
+        }, 5200);
+    }
+
+    function updateMobileLayout() {
+        if (!mobileLayoutToggle || !productsGrid) return;
+        productsGrid.classList.toggle('mobile-two-cols', state.mobileTwoCols);
+        mobileLayoutToggle.classList.toggle('active', state.mobileTwoCols);
+        mobileLayoutToggle.textContent = state.mobileTwoCols ? '▦ 2 cột mobile: Bật' : '▦ Mobile 2 cột';
+    }
+
+    mobileLayoutToggle?.addEventListener('click', () => {
+        state.mobileTwoCols = !state.mobileTwoCols;
+        updateMobileLayout();
+    });
+
+    const BASE_THEME_KEY = 'gptcodex-theme-base';
+    const HOLIDAY_KEY = 'gptcodex-theme-holiday';
+
+    let baseTheme = localStorage.getItem(BASE_THEME_KEY) === 'light' ? 'light' : 'dark';
+    // let holidayMode = localStorage.getItem(HOLIDAY_KEY) === 'true';
+    let holidayMode = 'true';
+
+    function applyThemeState() {
+        document.body.classList.toggle('light-theme', baseTheme === 'light');
+        document.body.classList.toggle('christmas-mode', holidayMode);
+        syncThemeButtons();
+    }
+
+    function syncThemeButtons() {
+        if (baseThemeToggle) {
+            const isLight = baseTheme === 'light';
+            baseThemeToggle.classList.toggle('active', isLight);
+            baseThemeToggle.innerHTML = isLight ? '☀️' : '🌙';
+            baseThemeToggle.setAttribute('aria-label', isLight ? 'Chuyển sang chế độ tối' : 'Chuyển sang chế độ sáng');
+        }
+        if (holidayToggle) {
+            holidayToggle.classList.toggle('active', holidayMode);
+            holidayToggle.innerHTML = holidayMode ? '🎄' : '✨';
+            holidayToggle.setAttribute('aria-label', holidayMode ? 'Tắt chế độ Noel' : 'Bật Noel Mode');
+        }
+    }
+
+    baseThemeToggle?.addEventListener('click', () => {
+        baseTheme = baseTheme === 'light' ? 'dark' : 'light';
+        localStorage.setItem(BASE_THEME_KEY, baseTheme);
+        applyThemeState();
+    });
+
+    holidayToggle?.addEventListener('click', () => {
+        holidayMode = !holidayMode;
+        localStorage.setItem(HOLIDAY_KEY, holidayMode ? 'true' : 'false');
+        applyThemeState();
+    });
+
+    applyThemeState();
+    updateMobileLayout();
+    renderProducts();
+</script>
+
+

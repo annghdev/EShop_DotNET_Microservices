@@ -12,11 +12,13 @@
     <ProjectReference Include="..\..\AuthService\AuthService.csproj" />
     <ProjectReference Include="..\..\BFF\BFF.csproj" />
     <ProjectReference Include="..\..\CatalogService\CatalogService.csproj" />
+    <ProjectReference Include="..\..\InventoryService\InventoryService.csproj" />
     <ProjectReference Include="..\..\OrderService\OrderService.csproj" />
     <ProjectReference Include="..\Aspire.Web\Aspire.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.Docker" Version="13.0.1-preview.1.25575.3" />
     <PackageReference Include="Aspire.Hosting.Redis" Version="13.0.0" />
   </ItemGroup>
 

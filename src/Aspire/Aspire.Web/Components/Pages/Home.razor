@@ -1,5 +1,134 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Annghdev EShop</PageTitle>
 
-<h1>Annghdev Welcom</h1>
+<section>
+    <div class="filters">
+        <div class="filter-left" id="categoryPills">
+            <button class="pill active" data-filter="all">Tất cả</button>
+            <button class="pill" data-filter="smartwear">Smartwear</button>
+            <button class="pill" data-filter="audio">Âm thanh</button>
+            <button class="pill" data-filter="home">Nội thất</button>
+            <button class="pill" data-filter="lifestyle">Lifestyle</button>
+        </div>
+        <div class="filter-right">
+            <div class="search">
+                <span>🔍</span>
+                <input type="text" id="searchInput" placeholder="Tìm kiếm cảm hứng...">
+            </div>
+            <div class="sort">
+                <select id="sortSelect">
+                    <option value="featured">Nổi bật nhất</option>
+                    <option value="price-asc">Giá tăng dần</option>
+                    <option value="price-desc">Giá giảm dần</option>
+                </select>
+            </div>
+            <div class="layout-toggle">
+                <button class="layout-pill" id="mobileLayoutToggle" type="button">
+                    ▦ Mobile 2 cột
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <p class="section-heading">Moodboard hôm nay</p>
+    <div class="mood-row">
+        <div class="mood-card">
+            <div>
+                <strong>Chill Neon</strong>
+                <p>Gam màu gradient ngọt ngào</p>
+            </div>
+            <span>🌌</span>
+        </div>
+        <div class="mood-card">
+            <div>
+                <strong>Slow Living</strong>
+                <p>Chạm là mê, cảm giác mịn lì</p>
+            </div>
+            <span>🌿</span>
+        </div>
+        <div class="mood-card">
+            <div>
+                <strong>Night Runner</strong>
+                <p>Phóng khoáng, thời thượng</p>
+            </div>
+            <span>⚡</span>
+        </div>
+    </div>
+
+    <p class="section-heading" id="stories">Stories nổi bật</p>
+    <div class="collection-grid">
+        <article class="collection-card" style="background-image: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80');">
+            <div>
+                <small>Drop 07</small>
+                <h4>Midnight Circuit</h4>
+                <p>Chất liệu phản quang và sợi carbon mềm đem lại trải nghiệm runway ngay trên phố.</p>
+            </div>
+            <button>Khám phá</button>
+        </article>
+        <article class="collection-card" style="background-image: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80');">
+            <div>
+                <small>Atelier</small>
+                <h4>Zen Living Set</h4>
+                <p>Bộ trà gốm thủ công kết hợp ánh sáng amber, dành cho khoảnh khắc chậm.</p>
+            </div>
+            <button>Đặt giữ chỗ</button>
+        </article>
+        <article class="collection-card" style="background-image: url('https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?auto=format&fit=crop&w=900&q=80');">
+            <div>
+                <small>Lab</small>
+                <h4>Pulse Runner</h4>
+                <p>Hệ thống đệm 4D tự điều chỉnh lực đáp, giới hạn 150 đôi trên toàn cầu.</p>
+            </div>
+            <button>Xem lookbook</button>
+        </article>
+    </div>
+</section>
+
+<section id="products">
+    <p class="section-heading">Tuyển chọn cá nhân hóa</p>
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="empty-state" id="emptyState" hidden>
+        Không tìm thấy sản phẩm phù hợp. Hãy thử từ khóa khác nhé!
+    </div>
+    <div class="pagination" id="pagination" hidden></div>
+</section>
+
+<section class="testimonials" id="care">
+    <p class="section-heading">Giới mộ điệu nói gì</p>
+    <div class="testimonial-grid">
+        <article class="testimonial-card">
+            <div class="testimonial-avatar">
+                <span>LT</span>
+                <div>
+                    <strong>Linh Trần</strong>
+                    <p>Creative Director</p>
+                </div>
+            </div>
+            <p>“Layer smartwear tại GPT Codex có texture cực kỳ mượt, phối cùng sneakers Pulse thì lên outfit đúng chất future-chic.”</p>
+            <div class="rating">★ 4.98</div>
+        </article>
+        <article class="testimonial-card">
+            <div class="testimonial-avatar">
+                <span>NA</span>
+                <div>
+                    <strong>Nam Anh</strong>
+                    <p>Sound Artist</p>
+                </div>
+            </div>
+            <p>“Nebula Pods cân được cả studio di động của tôi. Spatial audio chân thật, đặt hàng có stylist hỗ trợ luôn.”</p>
+            <div class="rating">★ 4.95</div>
+        </article>
+        <article class="testimonial-card">
+            <div class="testimonial-avatar">
+                <span>MH</span>
+                <div>
+                    <strong>Minh Hà</strong>
+                    <p>Interior Curator</p>
+                </div>
+            </div>
+            <p>“Bộ Kaihō ceramic đi cùng Velvet Glow Lamp khiến góc đọc tuyệt đối thư thái. Giao trong 36h rất ấn tượng.”</p>
+            <div class="rating">★ 5.0</div>
+        </article>
+    </div>
+</section>

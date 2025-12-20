@@ -8,10 +8,15 @@
     <Project Path="src/Aspire/Aspire.AppHost/Aspire.AppHost.csproj" Id="97ca4719-daef-4874-9663-e71b52487b0b" />
     <Project Path="src/Aspire/Aspire.Web/Aspire.Web.csproj" />
     <Project Path="src/BFF/BFF.csproj" />
+    <Project Path="src/WebUI/webui.esproj">
+      <Build />
+      <Deploy />
+    </Project>
   </Folder>
   <Folder Name="/src/Services/">
     <Project Path="src/AuthService/AuthService.csproj" />
     <Project Path="src/CatalogService/CatalogService.csproj" />
+    <Project Path="src/InventoryService/InventoryService.csproj" />
     <Project Path="src/OrderService/OrderService.csproj" />
   </Folder>
   <Folder Name="/src/Shared/">
@@ -21,17 +26,11 @@
   </Folder>
   <Folder Name="/tests/">
     <Project Path="src/Aspire/Aspire.Tests/Aspire.Tests.csproj" />
-    <Project Path="tests/AuthService.Test/AuthService.Test.csproj" Id="2b78bd4a-a97d-405d-9c90-497d7f945e44" />
-    <Project Path="tests/CartService.Test/CartService.Test.csproj" Id="4d357cfc-1e41-409b-8904-5c7a49fb7c2a" />
-    <Project Path="tests/CatalogService.Test/CatalogService.Test.csproj" Id="5acfab56-b3c8-42a8-858f-f1c795cc7d52" />
-    <Project Path="tests/FileService.Test/FileService.Test.csproj" Id="7b5a2071-603e-4a2f-aa8c-8f4dd6eea0e7" />
-    <Project Path="tests/InventoryService.Test/InventoryService.Test.csproj" Id="0ca655c9-d5ff-4ca3-b0c8-e42934323668" />
-    <Project Path="tests/NotificationService.Test/NotificationService.Test.csproj" Id="d34fa08e-c7ec-4630-9b76-472290533f41" />
-    <Project Path="tests/OrderService.Test/OrderService.Test.csproj" Id="3fef1f9c-0046-400a-a71a-ded68a86219c" />
-    <Project Path="tests/PaymentService.Test/PaymentService.Test.csproj" Id="e6487a4f-ec7e-454e-a3b0-d305c133279c" />
-    <Project Path="tests/PricingService.Test/PricingService.Test.csproj" Id="35a28a7f-2aa2-488a-80f9-5ac76b9cedb2" />
-    <Project Path="tests/ReportService.Test/ReportService.Test.csproj" Id="3201f58d-cb5b-4af0-b786-e3dc864677fe" />
-    <Project Path="tests/ShippingService.Test/ShippingService.Test.csproj" Id="740c8a46-f87a-4609-8574-59cc9d61ee86" />
+    <Project Path="tests/AuthService.Tests/AuthService.Tests.csproj" Id="93db7784-ddad-46c3-b8fe-66d795fd21c7" />
+    <Project Path="tests/BFF.Tests/BFF.Tests.csproj" Id="bbcd9e90-9a09-4939-9fef-25374ead9ce8" />
+    <Project Path="tests/CatalogService.Tests/CatalogService.Tests.csproj" Id="604af353-d2a4-4f4e-94e6-79d49f091237" />
+    <Project Path="tests/InventoryService.Tests/InventoryService.Tests.csproj" Id="33a1a7fe-9352-4e0f-856e-5da08a17acaf" />
+    <Project Path="tests/OrderService.Tests/OrderService.Tests.csproj" Id="a80082cf-8ad0-40e6-9642-8664df4f4937" />
     <Project Path="tests/Test.Common/Test.Common.csproj" Id="77ef93c3-57d4-4792-8ab7-8a39eb29487b" />
   </Folder>
 </Solution>

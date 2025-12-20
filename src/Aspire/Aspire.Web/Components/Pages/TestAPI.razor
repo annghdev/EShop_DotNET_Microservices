@@ -1,0 +1,23 @@
+﻿@page "/testapi"
+@inject TestApiClient ApiClient
+
+<h3>TestAPI</h3>
+
+@if(data == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p>Data from API: @data</p>
+}
+
+
+@code {
+    string data;
+
+    protected override async Task OnInitializedAsync()
+    {
+        data = await ApiClient.GetDataAsync();
+    }
+}
